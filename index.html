@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Watchface edit</title>
+    <meta name="description" content="Watchface creator for Amazfit Bip">
+    <meta name="viewport" content="width=device-width; initial-scale=1">
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="author" content="vlack">
+    <meta name="keywords" content="" />
+    <link href="assets/uikit/uikit.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <script src="assets/uikit/uikit.min.js"></script>
+</head>
+
+<body style="min-height: 100vh; background: linear-gradient(to left top, rgb(206, 255, 29), rgb(8, 232, 222));">
+    <main class="uk-container uk-transform-center uk-position-absolute" style="left: 50%; top: 50%">
+        <h1 class="uk-text-center" style="color: white">My projects</h1>
+        <div class="uk-flex uk-flex-center">
+            <a href="index.html">
+            <div class="uk-card uk-card-default" style="width: 600px">
+                <div class="uk-card-media-top">
+                    <img src="watchfaceEditor.png">
+                </div>
+                <div class="uk-card-body">
+                    <h3 class="uk-card-title">Watchface editor</h3>
+                    <p>Watchface editor for Amazfit Bip</p>
+                </div>
+            </div></a>
+        </div>
+    </main>
+</body>
+<script>
+    function getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    function changeColor(col) {
+        return col = col > 255 ? getRandomInt(0, 15) : col + getRandomInt(0, 5);
+    }
+    var color = {
+        from: {
+            r: 206,
+            g: 255,
+            b: 29
+        },
+        to: {
+            r: 8,
+            g: 232,
+            b: 222
+        },
+        lastColor: 1,
+        lastInterval: undefined,
+        controller: function() {
+            clearInterval(color.lastInterval);
+            if (color.lastColor == 1) {
+                color.lastColor = 2;
+                color.lastInterval = setInterval(color.change2, 250);
+                return;
+            }
+            if (color.lastColor == 2) {
+                color.lastColor = 3;
+                color.lastInterval = setInterval(color.change3, 250);
+                return;
+            }
+            if (color.lastColor == 3) {
+                color.lastColor = 4;
+                color.lastInterval = setInterval(color.change4, 250);
+                return;
+            }
+            if (color.lastColor == 4) {
+                color.lastColor = 5;
+                color.lastInterval = setInterval(color.change5, 250);
+                return;
+            }
+            if (color.lastColor == 5) {
+                color.lastColor = 6;
+                color.lastInterval = setInterval(color.change6, 250);
+                return;
+            }
+            if (color.lastColor == 6) {
+                color.lastColor = 1;
+                color.lastInterval = setInterval(color.change1, 250);
+                return;
+            }
+        },
+        change1: function() {
+            document.getElementsByTagName("body")[0].style.background = 'linear-gradient(to top left, rgb(' + color.from.r + ',' + color.from.g + ', ' + color.from.b + '), rgb(' + color.to.r + ',' + color.to.g + ', ' + color.to.b + ')';
+            color.from.r += getRandomInt(0, 5);
+            color.to.r += getRandomInt(0, 5);
+            if (color.from.r > 250 || color.to.r > 250)
+                color.controller();
+        },
+        change2: function() {
+            document.getElementsByTagName("body")[0].style.background = 'linear-gradient(to top left, rgb(' + color.from.r + ',' + color.from.g + ', ' + color.from.b + '), rgb(' + color.to.r + ',' + color.to.g + ', ' + color.to.b + ')';
+            color.from.g += getRandomInt(0, 5);
+            color.to.g += getRandomInt(0, 5);
+            if (color.from.g > 250 || color.to.g > 250)
+                color.controller();
+        },
+        change3: function() {
+            document.getElementsByTagName("body")[0].style.background = 'linear-gradient(to top left, rgb(' + color.from.r + ',' + color.from.g + ', ' + color.from.b + '), rgb(' + color.to.r + ',' + color.to.g + ', ' + color.to.b + ')';
+            color.from.b += getRandomInt(0, 5);
+            color.to.b += getRandomInt(0, 5);
+            if (color.from.b > 250 || color.to.b > 250)
+                color.controller();
+        },
+        change4: function() {
+            document.getElementsByTagName("body")[0].style.background = 'linear-gradient(to top left, rgb(' + color.from.r + ',' + color.from.g + ', ' + color.from.b + '), rgb(' + color.to.r + ',' + color.to.g + ', ' + color.to.b + ')';
+            color.from.r -= getRandomInt(0, 5);
+            color.to.r -= getRandomInt(0, 5);
+            if (color.from.r < 5 || color.to.r < 5)
+                color.controller();
+        },
+        change5: function() {
+            document.getElementsByTagName("body")[0].style.background = 'linear-gradient(to top left, rgb(' + color.from.r + ',' + color.from.g + ', ' + color.from.b + '), rgb(' + color.to.r + ',' + color.to.g + ', ' + color.to.b + ')';
+            color.from.g -= getRandomInt(0, 5);
+            color.to.g -= getRandomInt(0, 5);
+            if (color.from.g < 5 || color.to.g < 5)
+                color.controller();
+        },
+        change6: function() {
+            document.getElementsByTagName("body")[0].style.background = 'linear-gradient(to top left, rgb(' + color.from.r + ',' + color.from.g + ', ' + color.from.b + '), rgb(' + color.to.r + ',' + color.to.g + ', ' + color.to.b + ')';
+            color.from.b -= getRandomInt(0, 5);
+            color.to.b -= getRandomInt(0, 5);
+            if (color.from.b < 5 || color.to.b < 5)
+                color.controller();
+        }
+    }
+
+    color.controller();
+
+</script>
+
+</html>
