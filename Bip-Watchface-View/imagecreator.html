@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Watchface edit</title>
+    <meta name="description" content="Watchface creator for Amazfit Bip">
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="author" content="vlack">
+    <meta name="keywords" content="Amazfit, watchface, editor, edit, view" />
+    <link href="../assets/uikit/uikit.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
+    <script src="../assets/uikit/uikit.min.js"></script>
+</head>
+
+<body>
+    <div id="modal-loading" class="uk-modal-full uk-open" uk-modal style="display: block">
+        <div class="uk-modal-dialog" uk-height-viewport style="background: linear-gradient(to left, #28a5f5, #1e87f0); color: white">
+            <div class="uk-transform-center uk-position-absolute" style="left: 50%; top: 50%">
+                <div class="uk-padding-large">
+                    <h1 class="uk-text-center" style="color: white">Watchface editor moved to</h1>
+                    <h3 class="uk-text-center" style="margin-top: 0"><a href="https://v1ack.github.io/watchfaceEditor" style="color: white">v1ack.github.io/watchfaceEditor</a></h3>
+                </div>
+                <div uk-spinner class="uk-position-bottom-center"></div>
+            </div>
+        </div>
+        <script>
+            setTimeout(function() {
+                window.parent.location.href = "https://v1ack.github.io/watchfaceEditor/";
+            }, 3000);
+
+        </script>
+    </div>
+</body>
+
+</html>
