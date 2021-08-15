@@ -1,3 +1,7 @@
+<script context="module" lang="ts">
+  export const prerender = true
+</script>
+
 <script>
   import Carousel from "$lib/carousel/Carousel.svelte"
   import Accordion from "$lib/accordion/Accordion.svelte"

@@ -29,6 +29,11 @@ const config = {
       assets: "build",
       fallback: "404.html",
     }),
+    prerender: {
+      crawl: true,
+      enabled: true,
+      pages: ["*"],
+    },
   },
 }
 
