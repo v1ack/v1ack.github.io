@@ -40,8 +40,8 @@
     <p>Docs View</p>
     <a href="https://galaxy.store/docview"
       ><img
-        class=""
         alt="Available on Samsung Galaxy Store"
+        class=""
         src="https://img.samsungapps.com/seller/images/badges/galaxyStore/png_big/GalaxyStore_English.png"
         style="width: 180px;"
       /></a
@@ -60,15 +60,17 @@
 </div>
 
 <h2 class="text-3xl mt-5 mb-3">Screenshots</h2>
-<Carousel dots={false} loop={false} perPage={{ 1000: 4, 700: 3, 500: 2 }}>
-  <span class="carousel-arrow" slot="left-control">&lt;</span>
-  {#each images as image}
-    <div class="m-2 ring-4 ring-blue-300 rounded-3xl overflow-hidden">
-      <img src={image} alt="" class="" />
-    </div>
-  {/each}
-  <span class="carousel-arrow" slot="right-control">&gt;</span>
-</Carousel>
+<div>
+  <Carousel dots={false} loop={false} perPage={{ 1000: 4, 700: 3, 500: 2 }}>
+    <span class="carousel-arrow" slot="left-control">&lt;</span>
+    {#each images as image}
+      <div class="m-2 ring-4 ring-blue-300 rounded-3xl overflow-hidden">
+        <img src={image} alt="" class="" />
+      </div>
+    {/each}
+    <span class="carousel-arrow" slot="right-control">&gt;</span>
+  </Carousel>
+</div>
 
 <h2 class="text-3xl mt-5 mb-3" id="faq">FAQ</h2>
 <Accordion>

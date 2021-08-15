@@ -24,7 +24,7 @@
 <li>
   <button
     on:click={updateVisible}
-    class="text-lg hover:text-gray-500 font-medium leading-relaxed focus:outline-none"
+    class="text-lg hover:text-gray-500 font-medium leading-relaxed focus:outline-none text-left"
     >{title}</button
   >
   {#if visible}
