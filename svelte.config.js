@@ -22,6 +22,7 @@ const config = {
 
   kit: {
     // hydrate the <div id="svelte"> element in src/app.html
+    appDir: "app",
     target: "#svelte",
     adapter: adapter({
       // default options are shown
