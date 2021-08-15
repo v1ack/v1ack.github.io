@@ -1,7 +1,3 @@
-<script context="module" lang="ts">
-  export const prerender = true
-</script>
-
 <script lang="ts">
   import Card from "$lib/Card.svelte"
   import { projects } from "./_projects"

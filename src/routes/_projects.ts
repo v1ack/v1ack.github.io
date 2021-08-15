@@ -19,6 +19,22 @@ export const projects: IProject[] = [
     color: "#eee",
   },
   {
+    id: "fa-schedule",
+    name: "University schedule",
+    image: "/fa-schedule.png",
+    externalLink: "https://schedule.fa.ru",
+    description: "Calendar service for Financial University schedule",
+    color: "#FEDED9",
+  },
+  {
+    id: "fa-bot",
+    name: "Schedule chat-bot",
+    image: "/fa-bot.png",
+    externalLink: "https://bot.fa.ru",
+    description: "VK bot for Financial University schedule",
+    color: "#d9f7fe",
+  },
+  {
     id: "watchfaceEditor",
     name: "watchfaceEditor",
     image: "/wf-editor.png",
