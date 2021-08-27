@@ -39,7 +39,7 @@ export const projects: IProject[] = [
     name: "watchfaceEditor",
     image: "/wf-editor.png",
     description: "Online watchface editor for Amazfit Bip and Amazfit Cor",
-    color: "rgb(35, 150, 243)",
+    color: "rgb(78,177,255)",
     externalLink: "/watchfaceEditor",
   },
 ]

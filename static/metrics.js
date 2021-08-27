@@ -26,6 +26,7 @@ function install_metric(alt = false) {
 }
 
 ;(function () {
+  console.log("here")
   if (location.host.indexOf("localhost") + 1)
     return null
   install_metric()
