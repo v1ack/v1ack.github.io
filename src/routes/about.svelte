@@ -21,7 +21,7 @@
   <section class="col-span-1">
     <div>
       <h4>About me</h4>
-      <div>Programming it's just a way to make my ideas real.</div>
+      <div>Code it's just a way to make my ideas real</div>
       <div>
         Looking for a job with <span class="skill-bubble python"> Python</span> or
         <span class="skill-bubble js">
