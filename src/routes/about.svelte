@@ -23,11 +23,8 @@
       <h4>About me</h4>
       <div>Code it's just a way to make my ideas real</div>
       <div>
-        Looking for a job with <span class="skill-bubble python"> Python</span> or
-        <span class="skill-bubble js">
-          JS
-          <span>Svelte</span>
-        </span>
+        Looking for a job with <span class="skill-bubble python">Python</span> or
+        <span class="skill-bubble js">JS</span>
       </div>
       <div>
         Want to move forward with <span class="skill-bubble bg-green-500 text-white">Golang</span>
@@ -46,6 +43,7 @@
           JS
           <span>TypeScript</span>
           <span>Svelte</span>
+          <span>Vue</span>
         </span>
         <span class="skill-bubble bg-blue-800 text-white">PostgreSQL</span>
         <span class="skill-bubble bg-blue-800 text-white">Kubernetes</span>
@@ -112,7 +110,7 @@
         <div class="item">
           <h5>Messenger</h5>
           <div>
-            Personal study project. Implementation of full-working microservice-based messenger on
+            Personal startup project. Implementation of full-working microservice-based messenger on
             websocket
           </div>
           <div>
@@ -142,7 +140,7 @@
           <div>
             <span class="skill-bubble js">
               JS
-              <span>Svelte</span>
+              <span>Vue</span>
             </span>
             <span class="skill-bubble bg-blue-400 text-white">Tizen</span>
           </div>
