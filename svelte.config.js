@@ -27,6 +27,7 @@ const config = {
       // fallback: "404.html",
     }),
     prerender: {
+      default: true,
       crawl: true,
       enabled: true,
       entries: ["*"],

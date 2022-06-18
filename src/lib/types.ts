@@ -3,7 +3,6 @@ export interface IProject {
   name: string
   image: string
   description?: string
-  link?: boolean
-  externalLink?: string
+  links?: { link: string; title: string }[]
   color?: string
 }

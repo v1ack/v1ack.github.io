@@ -1,10 +1,11 @@
 <script lang="ts">
+  import type { IProject } from "./types"
+
   export let id: string
   export let name: string
   export let image: string
   export let description = ""
-  export let link: string
-  export let externalLink: string
+  export let links: IProject["links"]
   export let color = "white"
 </script>
 
@@ -26,12 +27,9 @@
       <p class="text-2xl font-medium">{name}</p>
       <p>{description}</p>
       <div class="flex justify-end mt-1">
-        {#if link}
-          <a href="/projects/{id}" class="link">More </a>
-        {/if}
-        {#if externalLink}
-          <a rel="external" href={externalLink} class="link">Open </a>
-        {/if}
+        {#each links as { link, title }}
+          <a href={link} class="link">{title}</a>
+        {/each}
       </div>
     </div>
   </div>

@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  @apply scroll-smooth;
+}
+
 a.text-link {
   @apply underline hover:text-blue-700 text-blue-900 hover:no-underline;
 }
