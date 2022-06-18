@@ -21,13 +21,15 @@
   <section class="col-span-1">
     <div>
       <h4>About me</h4>
-      <div>Code it's just a way to make my ideas real</div>
+      <div>22 y.o. <span class="skill-bubble python">Python</span> and
+        <span class="skill-bubble js">JS</span> developer</div>
+      <div>Code is just a way to make my ideas real</div>
       <div>
-        Looking for a job with <span class="skill-bubble python">Python</span> or
-        <span class="skill-bubble js">JS</span>
-      </div>
-      <div>
-        Want to move forward with <span class="skill-bubble bg-green-500 text-white">Golang</span>
+        ❤
+        <span class="skill-bubble js">
+          JS
+          <span>Svelte</span>
+        </span>
       </div>
     </div>
     <div>
