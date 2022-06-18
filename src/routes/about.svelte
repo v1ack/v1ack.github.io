@@ -12,7 +12,7 @@
 
 <h1 class="text-4xl font-semibold">
   Vladimir Kirilkin <span class="my-0.5" style="vertical-align: super;">
-    <span class="header-badge">👀 job</span>
+    <!--    <span class="header-badge">👀 job</span>-->
   </span>
 </h1>
 <h2 class="text-xl">Backend, frontend developer</h2>
@@ -85,6 +85,41 @@
           </div>
         </div>
 
+        <div class="item">
+          <h5>SIBUR Digital</h5>
+          <div>
+            <div>
+              <a
+                href="https://sibur.digital/projects/computervision"
+                class="text-blue-700 hover:text-blue-500"
+              >
+                Project on sibur.digital
+              </a>
+            </div>
+            Fullstack developer in Video Analytics project of Industry 4.0.
+            <ul class="list-disc ml-4 mt-2">
+              <li>Integrations with third-party services</li>
+              <li>Web editor for configs, built from json schemas from pydantic</li>
+            </ul>
+          </div>
+          <div>
+            <span class="skill-bubble python">
+              Python
+              <span>asyncio</span>
+              <span>aiohttp</span>
+              <span>FastAPI</span>
+              <span>pydantic</span>
+            </span>
+            <span class="skill-bubble js">
+              JS
+              <span>React</span>
+              <span>rjsf</span>
+            </span>
+            <span class="skill-bubble bg-red-400 text-white">WebSocket</span>
+            <span class="skill-bubble bg-blue-800 text-white">Docker</span>
+            <span class="skill-bubble bg-orange-600 text-white">GitLab CI</span>
+          </div>
+        </div>
         <span class="year">2022</span>
       </div>
 
@@ -140,7 +175,7 @@
           <div>
             <span class="skill-bubble js">
               JS
-              <span>Vue</span>
+              <span>Svelte</span>
             </span>
             <span class="skill-bubble bg-blue-400 text-white">Tizen</span>
           </div>

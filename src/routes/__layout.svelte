@@ -1,7 +1,8 @@
 <script context="module">
-  export const load = async ({ page }) => ({
+  /** @type {import("./__types/[slug]").Load} */
+  export const load = async ({ url }) => ({
     props: {
-      key: page.path,
+      key: url.pathname,
     },
   })
 </script>
@@ -22,11 +23,13 @@
     />
     <div class="flex justify-center items-center">
       <div class="flex-grow flex justify-end w-60">
-        <a class="header-link" class:active={$page.path === "/"} href="/">projects</a>
+        <a class="header-link" class:active={$page.url.pathname === "/"} href="/">projects</a>
       </div>
       <h1 class="text-3xl mx-4 my-2">vlack</h1>
       <div class="flex-grow flex w-60">
-        <a class="header-link" class:active={$page.path === "/about"} href="/about">about me</a>
+        <a class="header-link" class:active={$page.url.pathname === "/about"} href="/about"
+          >about me</a
+        >
       </div>
     </div>
   </div>
