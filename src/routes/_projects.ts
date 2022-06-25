@@ -5,7 +5,10 @@ export const projects: IProject[] = [
     id: "docsView",
     name: "Docs View",
     image: "/docsview.svg",
-    links: [{ link: "/projects/docsView", title: "More" }],
+    links: [
+      { link: "https://galaxy.store/docview", title: "Store" },
+      { link: "/projects/docsView", title: "More" },
+    ],
     description:
       "Tizen app for Samsung Galaxy Watch, Samsung Galaxy Watch Active, Samsung Gear S3 that allows you to open PDFs, markdown and txt",
     color: "#1caeec",
@@ -14,7 +17,17 @@ export const projects: IProject[] = [
     id: "svelte-virtual-scroll-list",
     name: "svelte-virtual-scroll-list",
     image: "/virtual-scroll-icon.png",
-    links: [{ link: "/svelte-virtual-scroll-list", title: "Open" }],
+    links: [
+      {
+        link: "https://www.npmjs.com/package/svelte-virtual-scroll-list",
+        title: "npm",
+      },
+      {
+        link: "https://github.com/v1ack/svelte-virtual-scroll-list",
+        title: "GitHub",
+      },
+      { link: "/svelte-virtual-scroll-list", title: "Demo" },
+    ],
     description: "Virtualized scrolling for big lists for Svelte",
     color: "#eee",
   },
@@ -22,7 +35,13 @@ export const projects: IProject[] = [
     id: "fa-schedule",
     name: "University schedule",
     image: "/fa-schedule.png",
-    links: [{ link: "https://schedule.fa.ru", title: "Open" }],
+    links: [
+      {
+        link: "https://github.com/financial-university/calendar-service",
+        title: "GitHub",
+      },
+      { link: "https://schedule.fa.ru", title: "Open" },
+    ],
     description: "Calendar service for Financial University schedule",
     color: "#FEDED9",
   },
@@ -30,7 +49,13 @@ export const projects: IProject[] = [
     id: "fa-bot",
     name: "Schedule chat-bot",
     image: "/fa-bot.png",
-    links: [{ link: "https://bot.fa.ru", title: "Open" }],
+    links: [
+      {
+        link: "https://github.com/financial-university/bot-vk",
+        title: "GitHub",
+      },
+      { link: "https://bot.fa.ru", title: "Open" },
+    ],
     description: "VK bot for Financial University schedule",
     color: "#d9f7fe",
   },

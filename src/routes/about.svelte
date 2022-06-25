@@ -21,8 +21,10 @@
   <section class="col-span-1">
     <div>
       <h4>About me</h4>
-      <div>22 y.o. <span class="skill-bubble python">Python</span> and
-        <span class="skill-bubble js">JS</span> developer</div>
+      <div>
+        22 y.o. <span class="skill-bubble python">Python</span> and
+        <span class="skill-bubble js">JS</span> developer
+      </div>
       <div>Code is just a way to make my ideas real</div>
       <div>
         ❤
