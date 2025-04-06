@@ -13,4 +13,20 @@ body {
   background-color: #dbeafe;
   overflow-x: hidden;
   overflow-y: overlay;
+  background:
+    radial-gradient(circle at top left, rgba(0, 196, 255, 0.3), transparent 50%),
+    radial-gradient(circle at bottom right, rgba(0, 200, 255, 0.3), transparent 50%),
+    radial-gradient(circle at center, rgba(255, 255, 177, 0.2), transparent 60%);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.glass {
+  background: rgb(255 255 255 / 62%);
+  backdrop-filter: blur(12px) saturate(150%);
+  -webkit-backdrop-filter: blur(12px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgb(0 0 0 / 10%);
 }

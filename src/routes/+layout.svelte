@@ -13,7 +13,7 @@
 </script>
 
 <main class="mx-auto max-w-screen-xl">
-  <div class="mb-6 rounded-b-2xl bg-white p-6">
+  <div class="glass mb-6 rounded-b-2xl p-6">
     <img
       class="mx-auto h-32 w-32 rounded-full bg-white ring-4 ring-blue-300"
       src="/vlack_logo.png"
@@ -34,7 +34,7 @@
   <div class="relative">
     {#key key}
       <div
-        class="absolute top-0 mb-6 w-full rounded-2xl bg-white p-6"
+        class="glass absolute top-0 mb-6 w-full rounded-2xl bg-white p-6"
         in:fly={{ x: 1000, duration: 500, delay: 500 }}
         out:fly={{ x: -1000, duration: 500 }}
       >
