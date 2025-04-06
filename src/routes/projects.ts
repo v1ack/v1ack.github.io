@@ -26,7 +26,7 @@ export const projects: IProject[] = [
         link: "https://github.com/v1ack/svelte-virtual-scroll-list",
         title: "GitHub",
       },
-      { link: "/svelte-virtual-scroll-list", title: "Demo" },
+      { link: "https://v1ack.github.io/svelte-virtual-scroll-list", title: "Demo" },
     ],
     description: "Virtualized scrolling for big lists for Svelte",
     color: "#eee",
@@ -65,6 +65,6 @@ export const projects: IProject[] = [
     image: "/wf-editor.png",
     description: "Online watchface editor for Amazfit Bip and Amazfit Cor",
     color: "rgb(78,177,255)",
-    links: [{ link: "/watchfaceEditor", title: "Open" }],
+    links: [{ link: "https://v1ack.github.io/watchfaceEditor", title: "Open" }],
   },
 ]

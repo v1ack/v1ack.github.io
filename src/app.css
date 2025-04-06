@@ -1,5 +1,16 @@
+@import 'tailwindcss';
+@import '@fontsource/fira-mono';
+
+html {
+    @apply scroll-smooth;
+}
+
+a.text-link {
+    @apply underline hover:text-blue-700 text-blue-900 hover:no-underline;
+}
+
 body {
-  background-color: #dbeafe;
-  overflow-x: hidden;
-  overflow-y: overlay;
+    background-color: #dbeafe;
+    overflow-x: hidden;
+    overflow-y: overlay;
 }

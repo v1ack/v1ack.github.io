@@ -22,17 +22,10 @@
     <div>
       <h4>About me</h4>
       <div>
-        22 y.o. <span class="skill-bubble python">Python</span> and
+        25 y.o. <span class="skill-bubble python">Python</span> and
         <span class="skill-bubble js">JS</span> developer
       </div>
       <div>Code is just a way to make my ideas real</div>
-      <div>
-        ❤
-        <span class="skill-bubble js">
-          JS
-          <span>Svelte</span>
-        </span>
-      </div>
     </div>
     <div>
       <h4>Skills</h4>
@@ -73,7 +66,7 @@
         <li><a href="https://t.me/vlack"><img src={TelegramIcon} alt="telegram" />@vlack</a></li>
         <li>
           <a href="mailto:kirilkin12@gmail.com"
-            ><img src={MailIcon} alt="email" />kirilkin12@gmail.com</a
+          ><img src={MailIcon} alt="email" />kirilkin12@gmail.com</a
           >
         </li>
       </ul>
@@ -262,76 +255,77 @@
   </section>
 </div>
 
-<style lang="scss">
-  .skill-bubble {
-    @apply px-3 py-1 rounded-full font-semibold my-0.5 inline-block text-sm;
+<style lang="postcss">
+    @reference "tailwindcss";
+    .skill-bubble {
+        @apply px-3 py-1 rounded-full font-semibold my-0.5 inline-block text-sm;
 
-    &.python {
-      @apply bg-blue-700 text-white;
+        &.python {
+            @apply bg-blue-700 text-white;
+        }
+
+        &.js {
+            @apply bg-yellow-400;
+        }
+
+        span {
+            @apply px-1.5 py-0.5 rounded-full text-xs bg-white/50 inline;
+        }
     }
 
-    &.js {
-      @apply bg-yellow-400;
+    h4 {
+        @apply text-xl font-bold mt-8 mb-2;
     }
 
-    span {
-      @apply px-1.5 py-0.5 rounded-full text-xs bg-opacity-50 bg-white inline;
-    }
-  }
+    .timeline {
+        @apply p-4 rounded-2xl border-4 border-indigo-300;
+        //padding-left: 2.5rem;
 
-  h4 {
-    @apply text-xl font-bold mt-8 mb-2;
-  }
+        .section {
+            @apply hover:bg-blue-50 rounded-2xl transition duration-300 ease-in-out mb-1;
+        }
 
-  .timeline {
-    @apply p-4 rounded-2xl border-4 border-indigo-300;
-    //padding-left: 2.5rem;
+        .year {
+            //margin-left: -1.5rem;
+            @apply rounded-full bg-gray-600 text-white px-2 inline-block;
+        }
 
-    .section {
-      @apply hover:bg-blue-50 rounded-2xl transition duration-300 ease-in-out mb-1;
-    }
+        .item {
+            @apply py-4;
+            margin-left: 1.5rem;
 
-    .year {
-      //margin-left: -1.5rem;
-      @apply rounded-full bg-gray-600 text-white px-2 inline-block;
-    }
+            .icon {
+                @apply inline-block;
+                width: 24px;
+            }
 
-    .item {
-      @apply py-4;
-      margin-left: 1.5rem;
-
-      .icon {
-        @apply inline-block;
-        width: 24px;
-      }
-
-      h5 {
-        @apply text-xl font-semibold;
-      }
-    }
-  }
-
-  .contacts-list {
-    a {
-      @apply hover:text-blue-700;
+            h5 {
+                @apply text-xl font-semibold;
+            }
+        }
     }
 
-    li {
-      @apply my-1;
+    .contacts-list {
+        a {
+            @apply hover:text-blue-700;
+        }
+
+        li {
+            @apply my-1;
+        }
+
+        img {
+            height: 20px;
+            margin-right: 8px;
+            @apply inline-block;
+        }
     }
 
-    img {
-      height: 20px;
-      margin-right: 8px;
-      @apply inline-block;
+    .header-badge {
+        @apply rounded-full bg-gradient-to-r from-red-300 to-indigo-400 text-white px-2 py-0.5 font-semibold text-sm inline-block;
     }
-  }
 
-  .header-badge {
-    @apply rounded-full bg-gradient-to-r from-red-300 to-indigo-400 text-white px-2 py-0.5 font-semibold text-sm inline-block;
-  }
-
-  .stat-colored {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-700 to-green-600 font-bold;
-  }
+    .stat-colored {
+        @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-700 to-green-600 font-bold;
+    }
 </style>

@@ -152,7 +152,8 @@
   </AccordionItem>
 </Accordion>
 
-<style lang="scss">
+<style lang="postcss">
+  @reference "tailwindcss";
   .carousel-arrow {
     @apply text-white text-4xl block hover:text-gray-200 transition-colors;
     transform: scaleY(2);

@@ -42,7 +42,7 @@
 <main style="--animation-time: {animationTime}ms;">
   <div bind:offsetWidth={outerBlockSize} class="outer">
     <ul class:transition style="transform: translateX({transform}px)">
-      {#each display_items as item}
+      {#each display_items as item (item.id)}
         <li style="order: {item.order}; width: {100 / itemsToDisplay}%">
           <img src={item.image} alt="item" />
         </li>

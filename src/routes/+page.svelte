@@ -1,6 +1,6 @@
 <script lang="ts">
   import Card from "$lib/Card.svelte"
-  import { projects } from "./_projects"
+  import { projects } from "./projects"
 </script>
 
 <svelte:head>
@@ -11,7 +11,7 @@
 <div
   class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 lg:grid-cols-3 gap-2 justify-items-center"
 >
-  {#each projects as project}
+  {#each projects as project (project.id)}
     <Card {...project} />
   {/each}
 </div>
