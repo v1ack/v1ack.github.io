@@ -12,21 +12,21 @@
   })
 </script>
 
-<main class="max-w-screen-xl mx-auto">
-  <div class="bg-white p-6 rounded-b-2xl mb-6 ">
+<main class="mx-auto max-w-screen-xl">
+  <div class="mb-6 rounded-b-2xl bg-white p-6">
     <img
-      class="w-32 h-32 rounded-full ring-blue-300 ring-4 mx-auto bg-white"
+      class="mx-auto h-32 w-32 rounded-full bg-white ring-4 ring-blue-300"
       src="/vlack_logo.png"
       alt="logo"
     />
-    <div class="flex justify-center items-center">
-      <div class="flex-grow flex justify-end w-60">
+    <div class="flex items-center justify-center">
+      <div class="flex w-60 flex-grow justify-end">
         <a class="header-link" class:active={page.url.pathname === "/"} href="/">projects</a>
       </div>
-      <h1 class="text-3xl mx-4 my-2">vlack</h1>
-      <div class="flex-grow flex w-60">
+      <h1 class="mx-4 my-2 text-3xl">vlack</h1>
+      <div class="flex w-60 flex-grow">
         <a class="header-link" class:active={page.url.pathname === "/about"} href="/about"
-        >about me</a
+          >about me</a
         >
       </div>
     </div>
@@ -34,7 +34,7 @@
   <div class="relative">
     {#key key}
       <div
-        class="absolute w-full top-0 bg-white p-6 rounded-2xl mb-6"
+        class="absolute top-0 mb-6 w-full rounded-2xl bg-white p-6"
         in:fly={{ x: 1000, duration: 500, delay: 500 }}
         out:fly={{ x: -1000, duration: 500 }}
       >
@@ -45,12 +45,12 @@
 </main>
 
 <style global lang="postcss">
-    @reference "tailwindcss";
-    .header-link {
-        @apply text-blue-900 cursor-pointer rounded-md px-2 py-1 hover:bg-blue-100;
+  @reference "tailwindcss";
+  .header-link {
+    @apply cursor-pointer rounded-md px-2 py-1 text-blue-900 hover:bg-blue-100;
 
-        &.active {
-            @apply bg-blue-200 hover:bg-blue-100 hover:text-blue-900;
-        }
+    &.active {
+      @apply bg-blue-200 hover:bg-blue-100 hover:text-blue-900;
     }
+  }
 </style>

@@ -7,9 +7,9 @@
   <title>vlack projects</title>
 </svelte:head>
 
-<h1 class="text-center text-2xl mb-6">projects</h1>
+<h1 class="mb-6 text-center text-2xl">projects</h1>
 <div
-  class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 lg:grid-cols-3 gap-2 justify-items-center"
+  class="grid grid-cols-1 justify-items-center gap-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
 >
   {#each projects as project (project.id)}
     <Card {...project} />

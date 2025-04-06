@@ -24,11 +24,11 @@
 <li>
   <button
     on:click={updateVisible}
-    class="text-lg hover:text-gray-500 font-medium leading-relaxed focus:outline-none text-left"
+    class="text-left text-lg leading-relaxed font-medium hover:text-gray-500 focus:outline-none"
     >{title}</button
   >
   {#if visible}
-    <div transition:slide class="pb-2 pt-1">
+    <div transition:slide class="pt-1 pb-2">
       <slot />
     </div>
   {/if}

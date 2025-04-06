@@ -319,7 +319,7 @@ export default class Siema {
     } else {
       this.currentSlide = Math.min(
         this.currentSlide + howManySlides,
-        this.innerElements.length - this.perPage
+        this.innerElements.length - this.perPage,
       )
     }
     if (beforeChange !== this.currentSlide) {

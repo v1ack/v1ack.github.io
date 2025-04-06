@@ -2,6 +2,9 @@
   import Carousel from "$lib/carousel/Carousel.svelte"
   import Accordion from "$lib/accordion/Accordion.svelte"
   import AccordionItem from "$lib/accordion/AccordionItem.svelte"
+  import DownloadIcon from "$lib/icons/download.svg?raw"
+  import GitHubIcon from "$lib/icons/github.svg?raw"
+  import SiteIcon from "$lib/icons/site.svg?raw"
 
   const images = [
     "/docsView/promo_open_pdf@2x.jpg",
@@ -16,55 +19,73 @@
   <title>Docs View</title>
 </svelte:head>
 
-<h1 class="text-7xl font-light leading-relaxed">Docs View</h1>
+<h1 class="text-7xl leading-relaxed font-light">Docs View</h1>
 <p class="text-2xl leading-loose">Open your docs (PDF, markdown and txt) on your watch</p>
 <p class="leading-loose">
-  Available for latest Tizen watch: Galaxy Watch3, Galaxy Active 2, Galaxy Active, Galaxy Watch and
-  Gear S3
+  Available for latest <b>Tizen</b> watch: Galaxy Watch3, Galaxy Active 2, Galaxy Active, Galaxy Watch
+  and Gear S3
 </p>
-<p>
-  Companion app to send files from phone to watch: <a
-    class="rounded-md bg-blue-600 text-blue-50 py-2 px-6 inline-block hover:bg-blue-500 hover:text-blue-100"
-    href="https://github.com/v1ack/v1ack.github.io/releases">Download apk</a
-  >
-</p>
-<div class="bg-blue-100 p-4 text-blue-800 rounded-md mt-4 mb-4">
+
+<div class="warning">
   <p>
-    Docs View is a newer version of PDFview. You can find more info <a class="underline" href="#faq"
-      >in FAQ</a
+    Due to <a
+      class="underline"
+      href="https://seller.samsungapps.com/notice/getNoticeDetail.as?csNoticeID=0000009034"
+      >discontinuing Tizen Watch service on Galaxy Store</a
+    >, full app is not available for download on Galaxy Store.
+  </p>
+  <p>
+    You can download <a
+      href="http://apps.samsung.com/appquery/appDetail.as?appId=pdfviewdem"
+      class="underline">free app with 3 documents limit from Galaxy Store</a
+    >
+    until <b>May 31th, 2025</b>, or until <b>September 30th, 2025</b> if you downloaded it erlier.
+  </p>
+  <p>
+    App is <a href="https://github.com/v1ack/PDFview" class="underline">open source</a> now, and can
+    be downloaded in
+    <a href="https://github.com/v1ack/PDFview/releases/tag/v1.1.3" class="underline"
+      >releases page</a
     >
   </p>
 </div>
-<div class="flex">
-  <div>
-    <p>Docs View</p>
-    <a href="https://galaxy.store/docview"
-      ><img
-        alt="Available on Samsung Galaxy Store"
-        class=""
-        src="https://img.samsungapps.com/seller/images/badges/galaxyStore/png_big/GalaxyStore_English.png"
-        style="width: 180px;"
-      /></a
+<div>
+  <h2 class="mb-3 text-3xl">Links</h2>
+  <p class="mb-2">
+    <a
+      class="download"
+      href="https://github.com/v1ack/PDFview/releases/download/v1.1.3/Docs.View.Sender.1.2.2.apk"
+      >{@html DownloadIcon}
+      Download apk</a
+    > - Android app to send files from phone to watch
+  </p>
+  <p class="mb-2">
+    <a
+      class="download"
+      href="https://github.com/v1ack/PDFview/releases/download/v1.1.3/Docs.View.1.1.3.wgt"
+      >{@html DownloadIcon} Download wgt</a
     >
-  </div>
-  <div class="ml-2">
-    <p>Docs View demo</p>
-    <a href="https://galaxy.store/docviewd"
-      ><img
-        alt="Available on Samsung Galaxy Store"
-        src="https://img.samsungapps.com/seller/images/badges/galaxyStore/png_big/GalaxyStore_English.png"
-        style="width: 180px;"
-      /></a
+    - Tizen app to open files on watch.
+    <a href="https://github.com/davesohen/galaxy_gear_s3" class="text-link">Installing option</a>
+  </p>
+  <p class="mb-2">
+    <a class="download" href="http://apps.samsung.com/appquery/appDetail.as?appId=pdfviewdem"
+      >{@html SiteIcon} Download demo</a
     >
-  </div>
+    - Galaxy Store app with limit of 3 files. <b>You can reinstall app to reset limit</b>
+  </p>
+  <p class="mb-2">
+    <a class="download" href="https://github.com/v1ack/PDFview/">{@html GitHubIcon} View source</a> -
+    Source code of the app
+  </p>
 </div>
 
-<h2 class="text-3xl mt-5 mb-3">Screenshots</h2>
+<h2 class="mt-5 mb-3 text-3xl">Screenshots</h2>
 <div>
   <Carousel dots={false} loop={false} perPage={{ 1000: 4, 700: 3, 500: 2 }}>
     <span class="carousel-arrow" slot="left-control">&lt;</span>
-    {#each images as image}
-      <div class="m-2 ring-4 ring-blue-300 rounded-3xl overflow-hidden">
+    {#each images as image (image)}
+      <div class="m-2 overflow-hidden rounded-3xl ring-4 ring-blue-300">
         <img src={image} alt="" class="" />
       </div>
     {/each}
@@ -72,9 +93,9 @@
   </Carousel>
 </div>
 
-<h2 class="text-3xl mt-5 mb-3" id="faq">FAQ</h2>
+<h2 class="mt-5 mb-3 text-3xl" id="faq">FAQ</h2>
 <Accordion>
-  <AccordionItem title={"The file loads too slowly"}>
+  <AccordionItem title="The file loads too slowly">
     <p>It's because of images in files. The best way to solve the problem is compressing PDF</p>
     <p>
       There are many tools online, I recommend <a
@@ -84,7 +105,7 @@
       > with "Recommend compression" setting
     </p>
   </AccordionItem>
-  <AccordionItem title={"How to open word DOC or powerpoint PPT files"}>
+  <AccordionItem title="How to open word DOC or powerpoint PPT files">
     <p>This app opens only PDF, but you are able to convert other formats to PDF</p>
     <p>
       There are many tools online, I recommend <a
@@ -126,37 +147,32 @@
       how it works
     </p>
   </AccordionItem>
-  <AccordionItem title="Links to PDFview">
-    <div class="flex">
-      <div>
-        <p>PDFview</p>
-        <a href="https://galaxy.store/pdfview"
-          ><img
-            alt="Available on Samsung Galaxy Store"
-            src="https://img.samsungapps.com/seller/images/badges/galaxyStore/png_big/GalaxyStore_English.png"
-            style="width: 180px;"
-          /></a
-        >
-      </div>
-      <div class="ml-2">
-        <p>PDFview demo</p>
-        <a href="https://galaxy.store/pdfviewd"
-          ><img
-            alt="Available on Samsung Galaxy Store"
-            src="https://img.samsungapps.com/seller/images/badges/galaxyStore/png_big/GalaxyStore_English.png"
-            style="width: 180px;"
-          /></a
-        >
-      </div>
-    </div>
-  </AccordionItem>
 </Accordion>
 
 <style lang="postcss">
   @reference "tailwindcss";
   .carousel-arrow {
-    @apply text-white text-4xl block hover:text-gray-200 transition-colors;
+    @apply block text-4xl text-white transition-colors hover:text-gray-200;
     transform: scaleY(2);
     line-height: 1;
+  }
+
+  a.download {
+    @apply inline-block rounded-md bg-blue-600 px-6 py-2 text-blue-50 hover:bg-blue-500 hover:text-blue-100;
+
+    :global(svg) {
+      @apply inline-block;
+      height: 1em;
+      margin-right: 0.2em;
+      vertical-align: text-bottom;
+    }
+  }
+
+  div.warning {
+    @apply mt-4 mb-4 rounded-md bg-orange-100 p-4 text-orange-800;
+
+    p {
+      @apply py-1;
+    }
   }
 </style>

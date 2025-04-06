@@ -17,7 +17,7 @@
 </h1>
 <h2 class="text-xl">Backend, frontend developer</h2>
 
-<div class="md:grid md:grid-cols-3 gap-4">
+<div class="gap-4 md:grid md:grid-cols-3">
   <section class="col-span-1">
     <div>
       <h4>About me</h4>
@@ -66,7 +66,7 @@
         <li><a href="https://t.me/vlack"><img src={TelegramIcon} alt="telegram" />@vlack</a></li>
         <li>
           <a href="mailto:kirilkin12@gmail.com"
-          ><img src={MailIcon} alt="email" />kirilkin12@gmail.com</a
+            ><img src={MailIcon} alt="email" />kirilkin12@gmail.com</a
           >
         </li>
       </ul>
@@ -94,7 +94,7 @@
               </a>
             </div>
             Fullstack developer in Video Analytics project of Industry 4.0.
-            <ul class="list-disc ml-4 mt-2">
+            <ul class="mt-2 ml-4 list-disc">
               <li>Integrations with third-party services</li>
               <li>Web editor for configs, built from json schemas from pydantic</li>
             </ul>
@@ -256,76 +256,76 @@
 </div>
 
 <style lang="postcss">
-    @reference "tailwindcss";
-    .skill-bubble {
-        @apply px-3 py-1 rounded-full font-semibold my-0.5 inline-block text-sm;
+  @reference "tailwindcss";
+  .skill-bubble {
+    @apply my-0.5 inline-block rounded-full px-3 py-1 text-sm font-semibold;
 
-        &.python {
-            @apply bg-blue-700 text-white;
-        }
-
-        &.js {
-            @apply bg-yellow-400;
-        }
-
-        span {
-            @apply px-1.5 py-0.5 rounded-full text-xs bg-white/50 inline;
-        }
+    &.python {
+      @apply bg-blue-700 text-white;
     }
 
-    h4 {
-        @apply text-xl font-bold mt-8 mb-2;
+    &.js {
+      @apply bg-yellow-400;
     }
 
-    .timeline {
-        @apply p-4 rounded-2xl border-4 border-indigo-300;
-        //padding-left: 2.5rem;
+    span {
+      @apply inline rounded-full bg-white/50 px-1.5 py-0.5 text-xs;
+    }
+  }
 
-        .section {
-            @apply hover:bg-blue-50 rounded-2xl transition duration-300 ease-in-out mb-1;
-        }
+  h4 {
+    @apply mt-8 mb-2 text-xl font-bold;
+  }
 
-        .year {
-            //margin-left: -1.5rem;
-            @apply rounded-full bg-gray-600 text-white px-2 inline-block;
-        }
+  .timeline {
+    @apply rounded-2xl border-4 border-indigo-300 p-4;
+    //padding-left: 2.5rem;
 
-        .item {
-            @apply py-4;
-            margin-left: 1.5rem;
-
-            .icon {
-                @apply inline-block;
-                width: 24px;
-            }
-
-            h5 {
-                @apply text-xl font-semibold;
-            }
-        }
+    .section {
+      @apply mb-1 rounded-2xl transition duration-300 ease-in-out hover:bg-blue-50;
     }
 
-    .contacts-list {
-        a {
-            @apply hover:text-blue-700;
-        }
-
-        li {
-            @apply my-1;
-        }
-
-        img {
-            height: 20px;
-            margin-right: 8px;
-            @apply inline-block;
-        }
+    .year {
+      //margin-left: -1.5rem;
+      @apply inline-block rounded-full bg-gray-600 px-2 text-white;
     }
 
-    .header-badge {
-        @apply rounded-full bg-gradient-to-r from-red-300 to-indigo-400 text-white px-2 py-0.5 font-semibold text-sm inline-block;
+    .item {
+      @apply py-4;
+      margin-left: 1.5rem;
+
+      .icon {
+        @apply inline-block;
+        width: 24px;
+      }
+
+      h5 {
+        @apply text-xl font-semibold;
+      }
+    }
+  }
+
+  .contacts-list {
+    a {
+      @apply hover:text-blue-700;
     }
 
-    .stat-colored {
-        @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-700 to-green-600 font-bold;
+    li {
+      @apply my-1;
     }
+
+    img {
+      height: 20px;
+      margin-right: 8px;
+      @apply inline-block;
+    }
+  }
+
+  .header-badge {
+    @apply inline-block rounded-full bg-gradient-to-r from-red-300 to-indigo-400 px-2 py-0.5 text-sm font-semibold text-white;
+  }
+
+  .stat-colored {
+    @apply bg-gradient-to-r from-blue-700 to-green-600 bg-clip-text font-bold text-transparent;
+  }
 </style>

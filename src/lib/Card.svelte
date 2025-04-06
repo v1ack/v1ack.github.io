@@ -4,24 +4,24 @@
   const { name, image, description, links, color }: IProject = $props()
 </script>
 
-<div class="rounded-xl overflow-hidden cursor-pointer group w-72 relative transition-color">
+<div class="group transition-color relative w-72 cursor-pointer overflow-hidden rounded-xl">
   <figure class=" h-80 overflow-hidden" style="background-color: {color};">
-    <img alt="" class="object-contain object-center w-full h-full" src={image} />
+    <img alt="" class="h-full w-full object-contain object-center" src={image} />
   </figure>
-  <div class="absolute p-3 bottom-0">
-    <h3 class="text-lg bg-blue-500 rounded-lg px-3 py-1 text-white mx-auto">
+  <div class="absolute bottom-0 p-3">
+    <h3 class="mx-auto rounded-lg bg-blue-500 px-3 py-1 text-lg text-white">
       {name}
     </h3>
   </div>
   <div
-    class="absolute p-2 w-full
-    transform group-hover:-translate-y-full
-    transition-transform duration-500 ease-in-out"
+    class="absolute w-full transform
+    p-2 transition-transform
+    duration-500 ease-in-out group-hover:-translate-y-full"
   >
-    <div class="p-4 bg-white rounded-lg">
+    <div class="rounded-lg bg-white p-4">
       <p class="text-2xl font-medium">{name}</p>
       <p>{description}</p>
-      <div class="flex justify-end mt-1">
+      <div class="mt-1 flex justify-end">
         {#each links || [] as { link, title } (link)}
           <a href={link} class="link">{title}</a>
         {/each}
@@ -31,10 +31,8 @@
 </div>
 
 <style lang="postcss">
-    @reference "tailwindcss";
-    .link {
-        @apply float-right text-blue-600 border border-blue-600 rounded-md px-4 py-1 ml-2
-        transition-colors duration-300 ease-in-out
-        hover:bg-blue-500 hover:text-white;
-    }
+  @reference "tailwindcss";
+  .link {
+    @apply float-right ml-2 rounded-md border border-blue-600 px-4 py-1 text-blue-600 transition-colors duration-300 ease-in-out hover:bg-blue-500 hover:text-white;
+  }
 </style>

@@ -6,7 +6,11 @@ export const projects: IProject[] = [
     name: "Docs View",
     image: "/docsview.svg",
     links: [
-      { link: "https://galaxy.store/docview", title: "Store" },
+      {
+        link: "https://github.com/v1ack/PDFview",
+        title: "GitHub",
+      },
+      { link: "http://apps.samsung.com/appquery/appDetail.as?appId=pdfviewdem", title: "Store" },
       { link: "/projects/docsView", title: "More" },
     ],
     description:
