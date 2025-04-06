@@ -1,6 +1,8 @@
 @import "tailwindcss";
 @import "@fontsource/fira-mono";
 
+@custom-variant hover (&:hover);
+
 html {
   @apply scroll-smooth;
 }
