@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+.mdx-svelte {
+  h1 {
+    @apply text-7xl leading-relaxed font-light;
+  }
+
+  h2 {
+    @apply mt-8 mb-4 text-5xl leading-relaxed font-light;
+  }
+
+  h3 {
+    @apply text-4xl;
+  }
+
+  h4 {
+    @apply mt-4 mb-2 text-3xl;
+  }
+
+  a {
+    @apply text-blue-900 underline hover:text-blue-700 hover:no-underline;
+  }
+
+  p {
+    @apply my-2;
+  }
+
+  img {
+    max-height: 80vh;
+  }
+
+  ul {
+    @apply list-inside list-disc;
+  }
+
+  table {
+    @apply mb-3 text-sm;
+
+    thead {
+      @apply text-xs uppercase;
+
+      th {
+        @apply px-6 py-3;
+      }
+    }
+
+    tbody {
+      tr {
+        @apply border-b border-gray-200;
+
+        td {
+          @apply px-6 py-4;
+        }
+      }
+
+      tr:last-child {
+        @apply border-b-0;
+      }
+    }
+  }
+}

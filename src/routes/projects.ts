@@ -2,6 +2,15 @@ import type { IProject } from "$lib/types"
 
 export const projects: IProject[] = [
   {
+    id: "lelight",
+    name: "LeLight",
+    image: "/ble-light.svg",
+    links: [{ link: "/projects/lelight", title: "More" }],
+    description:
+      "Reverse engineering of LeLight smart lamp. The project includes a custom firmware for the lamp and a web application for controlling it",
+    color: "#eee",
+  },
+  {
     id: "docsView",
     name: "Docs View",
     image: "/docsview.svg",
